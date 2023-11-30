@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <div class="container">
+        <form action="#">
+            <div class="input-box">
+                <p>email</p>
+                <input type="text" placeholder="username" required>
+                <i class='bx bx-user'></i>
+            </div>
+            <p>password</p>
+            <input type="password" placeholder="password" required>
+            <i class='bx bx-lock-alt' ></i>
+    </div> 
+    <p>confirm password</p>
+    <input type="password" placeholder="password" required>
+    <i class='bx bx-lock-alt' ></i>
+    <div class="button">
+        <button type="submit" class="sign in">Sign In</button>
+
+    </div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <button id="showPasswordButton">Show Password</button>
+<div class="button">
+    <script>
+        const passwordInput = document.getElementById('password');
+        const showPasswordButton = document.getElementById('showPasswordButton');
+
+        showPasswordButton.addEventListener('click', function () {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+        });
+    </script>
+</div>
+</form>
+</body>
+</html>
