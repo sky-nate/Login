@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anniversary Love</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9e6e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #loveMessage {
+            display: none;
+            font-size: 24px;
+            color: #ff4d4d;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="loveMessage"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loveMessage = document.getElementById('loveMessage');
+
+            document.addEventListener('click', function(event) {
+                const x = event.clientX;
+                const y = event.clientY;
+
+                loveMessage.style.left = `${x}px`;
+                loveMessage.style.top = `${y}px`;
+
+                loveMessage.innerHTML = 'I love you';
+                loveMessage.style.display = 'block';
+
+                setTimeout(function() {
+                    loveMessage.style.opacity = 0;
+                }, 1000);
+
+                setTimeout(function() {
+                    loveMessage.style.display = 'none';
+                    loveMessage.style.opacity = 1;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

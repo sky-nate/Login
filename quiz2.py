@@ -1,3 +1,4 @@
+#still needs a couple of debugging to do...
 name = input("Hello user, what is your name? ")
 print(f"Hello {name} welcome to my quiz, have fun!")
 
@@ -5,10 +6,6 @@ start = input("do you want to play? Y/N: ")
 if start == "Yes" or "yes" or "y":
     print("Great, lets get started!")
     points = 0
-
-if start == "No" or "no" or "n":
-    print("Okay, bye bye")
-    quit
 
 print('''Question 1: What is the capital of France?
 A) Berlin
@@ -20,7 +17,7 @@ q1 = input("what is the answer? ")
 if q1 == "c":
     print("correct!")
     print(f"you have {points+1} point(s) so far!")
-    points =+1  
+    points = 1
     print("-------------------------------------------------------")
 else:
     print("incorrect! its C")
@@ -38,11 +35,11 @@ q2 = input("what is the answer? ")
 if q2 == "A" or "a":
     print("correct!")
     print(f"you have {points + 1} points so far. Rock on dude")
-    points = +1
+    points = 2
     print("-------------------------------------------------------")
 else:
     print("incorrect! its A")
-    print(f"you now have {points} points. You got this")
+    print(f"you now have {points -1} points. You got this")
     print("-------------------------------------------------------")
 
 print('''Question 3: Who wrote the play "Romeo & Juliet"?
@@ -54,12 +51,12 @@ D) Mark Twain''')
 q3 = input("what is the answer? ")
 if q3 == "b" or "B":
     print("correct!")
-    print(f"you now have {points} points. Nice one!")
+    print(f"you now have {points + 1} points. Nice one!")
     print("-------------------------------------------------------")
 
 else:
     print("incorrect! its B")
-    print(f"you now have {points} points. Tough one I know")
+    print(f"you now have {points -1} points. Tough one I know")
     print("-------------------------------------------------------")
 
 print('''Question 4: What is the symbol of Gold?
@@ -71,7 +68,7 @@ D) Fe''')
 q4 = input("what is the answer? ")
 if q4 == "B" or "b":
     print("correct")
-    print(f"you now have {points} points. On a roll wow")
+    print(f"you now have {points + 2} points. On a roll wow")
     print("-------------------------------------------------------")
 else:
     print("incorrect! its B")
